@@ -3,7 +3,7 @@
 
     <div class="text-box">
       <h1>Panel For Tests 😋</h1>
-      <p class="mt-3">Creating tests with love ❤️ ️</p>
+      <p class="mt-3">Creating tests with love ❤</p>
 
       <v-btn
         rounded

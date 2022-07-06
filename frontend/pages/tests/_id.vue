@@ -22,13 +22,6 @@
 
         </v-card>
       </v-col>
-<!--      <v-btn-->
-<!--        tile-->
-<!--        color="primary"-->
-<!--        :to="'http://localhost:3000/tests'"-->
-<!--      >-->
-<!--        Back-->
-<!--      </v-btn>-->
     </div>
   </main>
 </template>

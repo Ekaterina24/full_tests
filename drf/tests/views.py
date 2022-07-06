@@ -43,13 +43,8 @@ class TestViewSet(ModelViewSet):
     serializer_class = TestSerializer
     pagination_class = TestViewSetPagination
     filter_backends = [SearchFilter, OrderingFilter, ]
-#     permission_classes = [IsOwnerOrStaffOrReadOnly, ]
     search_fields = ['title']
     ordering_fields = ['title']
-
-#     def perform_create(self, serializer):
-#         serializer.validated_data['owner'] = self.request.user
-#         serializer.save()
 
     def get_queryset(self):
         pk = self.kwargs.get('pk')
@@ -74,13 +69,11 @@ class TestViewSet(ModelViewSet):
 class UserTestsRelationAllView(ModelViewSet, CreateModelMixin):
     queryset = UserTestRelation.objects.all()
     serializer_class = UserTestRelationSerializer
-#     permission_classes = [IsAuthenticated, ]
     filter_backends = [DjangoFilterBackend, ]
     filter_fields = ['rate']
 
 
 class UserTestsRelationQView(generics.ListAPIView):
-#     permission_classes = [IsAuthenticated, ]
     queryset = UserTestRelation.objects.filter(Q(rate__startswith='4') | Q(rate__startswith='5'))
     serializer_class = UserTestRelationSerializer
 
@@ -94,8 +87,6 @@ class TestAPIDestroy(generics.RetrieveDestroyAPIView):
 class TestCreateViewSet(generics.ListCreateAPIView):
     queryset = Test.objects.all()
     serializer_class = TestCreateSerializer
-#     pagination_class = TestViewSetPagination
-#     permission_classes = [IsAuthenticatedOrReadOnly, ]
 
 
 class QuestionViewSetPagination(PageNumberPagination):
@@ -107,8 +98,6 @@ class QuestionViewSetPagination(PageNumberPagination):
 class QuestionViewSet(ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
-#     pagination_class = QuestionViewSetPagination
-#     permission_classes = [IsAuthenticatedOrReadOnly, ]
 
 
 class QuestionCreateViewSet(generics.ListCreateAPIView):

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'modeltranslation',
+#     'modeltranslation',
     'simple_history',
     'django_filters',
     'social_django',
@@ -63,9 +63,9 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS  = [
-    "http://localhost:3000",
-]
+# CORS_ALLOWED_ORIGINS  = [
+#     "http://localhost:3000",
+# ]
 
 
 ROOT_URLCONF = 'drf.urls'

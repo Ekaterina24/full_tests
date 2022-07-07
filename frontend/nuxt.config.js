@@ -42,7 +42,7 @@ export default {
   ],
 
   axios: {
-    baseURL: "http://127.0.0.1:8000/",
+    baseURL: "http://full-tests.std-1357.ist.mospolytech.ru/",
     // proxy: true
   },
 
